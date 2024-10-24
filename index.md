@@ -172,8 +172,8 @@ We will learn how to work with unstructured data in the form of text and discuss
 
 #### Seminar
 
-- Code: [Exercises in text analysis](x), [solution](x)
-- Data: [UoL institutions](x)
+- Code: [Exercises in text analysis](week04/04-exercises-text-analysis.Rmd), [solution](week04/04-exercises-text-analysis-solution.Rmd)
+- Data: [news article](week04/data/news-article-1.txt), [UoL institutions](week04/data/uol.txt) 
 
 
 #### Reading
@@ -182,7 +182,7 @@ We will learn how to work with unstructured data in the form of text and discuss
 
 #### Further reading
 - Wickham, Hadley and Garett Grolemund.  2017, [Chapter 14](http://r4ds.had.co.nz/strings.html)
-- [Regular expressions cheat sheet](x)
+- [Regular expressions cheat sheet](https://github.com/rstudio/cheatsheets/blob/main/regex.pdf)
 - [Regular expressions in R vignette](https://cran.r-project.org/web/packages/stringr/vignettes/regular-expressions.html)
 
 
