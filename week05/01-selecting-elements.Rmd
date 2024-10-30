@@ -73,7 +73,7 @@ length(relevant_elements)
 In fact, only one node is returned in the list. It is the correct division container with text:
 
 ```{r}
-html_text(relevant_elements[[1]])
+cat(html_text(relevant_elements[[1]]))
 ```
 
 Lastly, when inspecting an element and copying the CSS selector in your browser, often a so called pseudo class is returned which names the nth child of a parent element. Conceptually, this makes use of the tree representation of such documents. For example, let us select and scrape only the first paragraph in the second division. "Inspect element" (in Google Chrome) yields exactly such a type of CSS selector "body > div.division-two > p:nth-child(2)". This simply means that the paragraph of interest is the second child of the division parent element "div" which we previously named "division two". Thinking of our website as a tree, what is the first child of this parent element?
@@ -81,6 +81,6 @@ Lastly, when inspecting an element and copying the CSS selector in your browser,
 Scraping with this CSS selector yields the correct element from our website:
 
 ```{r}
-relevant_elements <- html_elements(html, css = "__________") # fill this in during lecture
-html_text(relevant_elements[[1]])
+relevant_elements <- html_elements(html, css = "body > div.division-two > p:nth-child(2)") # fill this in during lecture
+cat(html_text(relevant_elements[[1]]))
 ```

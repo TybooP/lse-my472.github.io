@@ -5,7 +5,7 @@ date: "AT 2024"
 output: html_document
 ---
 
-**Attribution statement:** _The following teaching materials have been iteratively developed by current and former instructors, including: Tom Robinson and Ryan Hübert. This file is based on resources created by Pablo Barberá and Friedrich Geiecke. You can find their comprehensive examples of **ggplot** in the `03a-ggplot2-basics.Rmd` and `03b-scales-axes-legends.Rmd` files._
+**Attribution statement:** *The following teaching materials have been iteratively developed by current and former instructors, including: Tom Robinson and Ryan Hübert. This file is based on resources created by Pablo Barberá and Friedrich Geiecke. You can find their comprehensive examples of **ggplot** in the `03a-ggplot2-basics.Rmd` and `03b-scales-axes-legends.Rmd` files.*
 
 ## Introduction
 
@@ -13,7 +13,7 @@ In the examples below, we will be working with a random sample of 10,000 public 
 
 Load two packages that we will use.
 
-```{r} 
+```{r}
 library(tidyverse)
 library(scales)
 ```
@@ -39,9 +39,9 @@ df <- df %>%
 print(nrow(df))  # How many rows did we end with?
 ```
 
-## Number of likes 
+## Number of likes
 
-Let's consider a case where we wanted to understand how much engagement Members of Congress are getting on their posts. This is a *univariate* analysis, since we are concerned with the distribution of a single variable. 
+Let's consider a case where we wanted to understand how much engagement Members of Congress are getting on their posts. This is a *univariate* analysis, since we are concerned with the distribution of a single variable.
 
 We can begin by looking at some simple summary statistics; i.e., summarising the `likes_count` variable.
 
@@ -88,12 +88,12 @@ likes_hist +
 
 **Note**: You should always read and try to deal with non-fatal warnings! It is not usually good practice to leave errors and warnings unresolved in your scripts. Here, `ggplot` is warning us that:
 
-1. it is using its default binning rule (create 30 bins); and 
-2. the log transformation caused some values to be dropped (why?)
+1.  it is using its default binning rule (create 30 bins); and
+2.  the log transformation caused some values to be dropped (why?)
 
-In spite of the warnings, this graph is better than the previous. From a presentation perspective, we should really tidy up the axes and theme. Let's do that, and also make a couple modifications to get rid of the two warnings. 
+In spite of the warnings, this graph is better than the previous. From a presentation perspective, we should really tidy up the axes and theme. Let's do that, and also make a couple modifications to get rid of the two warnings.
 
-``` {r}
+```{r}
 # Redefine the likes_hist object to resolve warnings
 likes_hist <- df %>% 
   filter(likes_count > 0) %>% # resolve warning 2: can't log transform zeroes 
@@ -109,7 +109,7 @@ likes_hist +
 
 Maybe we would like to add the mean and median on this plot in a new layer?
 
-``` {r}
+```{r}
 likes_hist + 
   scale_x_log10(labels = comma) + 
   labs(x = "Likes", y = "No. of posts") + 
@@ -144,7 +144,7 @@ party_likes +
   theme_minimal() 
 ```
 
-Sometimes, we might prefer to represent the distribution in a continuous way rather than using discrete bins. So we can substitute the histogram for a **density** geom. The problem here (and often with histograms too) is that the fill of the shapes means overlapping areas are hidden. We can tackle this by making our density plots slightly transparent, using the `alpha = ` argument of the geom:
+Sometimes, we might prefer to represent the distribution in a continuous way rather than using discrete bins. So we can substitute the histogram for a **density** geom. The problem here (and often with histograms too) is that the fill of the shapes means overlapping areas are hidden. We can tackle this by making our density plots slightly transparent, using the `alpha =` argument of the geom:
 
 ```{r}
 party_likes +
@@ -172,7 +172,7 @@ pty_gndr_likes +
   theme_minimal() 
 ```
 
-Now that's confusing! What would be better is if we could separate the male and female plots into separate panes or **facets**. To do this, we perform a special form of mapping where some variable is used to define subsets of the data we should generate the same *form* of visual for. In **ggplot2*, we simply use `facet_wrap()`:
+Now that's confusing! What would be better is if we could separate the male and female plots into separate panes or **facets**. To do this, we perform a special form of mapping where some variable is used to define subsets of the data we should generate the same *form* of visual for. In \*\*ggplot2\*, we simply use `facet_wrap()`:
 
 ```{r}
 
@@ -199,7 +199,7 @@ party_likes +
   theme_minimal() 
 ```
 
-Finally, we may want to save a plot. There are many ways to do this, but let's use the out-of-the-box saving function in `ggplot2`, which is called `ggsave`. 
+Finally, we may want to save a plot. There are many ways to do this, but let's use the out-of-the-box saving function in `ggplot2`, which is called `ggsave`.
 
 ```{r}
 ggsave(filename = "my_pretty_plot.png", 
