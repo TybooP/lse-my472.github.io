@@ -21,7 +21,7 @@ We will explore patterns in the data for live births in London. The data is main
 First, let's create a directory to store the data we'll use.
 
 ```{r, eval=FALSE}
-odir <- "tba" # Change this to a location on your computer
+odir <- "london" # Change this to a location on your computer
 
 # Check if the directory exists, and if not, create it
 if(dir.exists(odir)){ } else { dir.create(odir) }

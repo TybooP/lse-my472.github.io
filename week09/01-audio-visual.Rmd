@@ -11,8 +11,8 @@ In this document, you will explore how to ingest audio and image data into R, ho
 We begin with audio data, where we will use the `tuneR` and `seewave` packages. Note: you may need to install these packages before you can run this code.
 
 ```{r, eval=FALSE}
-# install.packages("tuneR")
-# install.packages("seewave")
+#install.packages("tuneR")
+#install.packages("seewave")
 library("tuneR")
 library("seewave")
 library("tidyverse")
@@ -39,7 +39,7 @@ Here are a few recordings that you can download and work with on your own time:
 Let's look at Martin Luther King's "I have a dream" speech and do some analysis. First we need to get the file. We will do this by (1) setting a working directory and then (2) downloading the `.mp3` file into this directory.
 
 ```{r, eval=FALSE}
-odir <- "tba" # Change this to a location on your computer
+odir <- "audio" # Change this to a location on your computer
 
 # Check if the directory exists, and if not, create it
 if(dir.exists(odir)){ } else { dir.create(odir) }
@@ -154,7 +154,7 @@ library("tidyverse")
 library("rvest")
 
 # Create folder for the files we are downloading
-odir <- "tba" # Change this to a location on your computer
+odir <- "images" # Change this to a location on your computer
 
 # Check if the directory exists, and if not, create it
 if(dir.exists(odir)){ } else { dir.create(odir) }
@@ -235,7 +235,7 @@ my.img <- readJPEG(df$filename[p])
 
 ## Basic information about the object just imported
 print(class(my.img)) # note this is an array
-print(dim(my.img)) # the array has three 200x200 matrices 
+print(dim(my.img)) # the array has three 200x200 matrices
 ```
 
 The data from digital photos is imported as an array, which is a collection of three matrices. Each cell in each matrix represents a pixel, so in this case, we can see that our image is 200 pixels by 200 pixels. Each of the matrices represents one of the three primary colours. The first one is red, the second one is green and the third one is blue (remember: RGB, not to be confused with RBG for all of you U.S. Americans...).

@@ -78,7 +78,7 @@ ggplot(social_security_data_long) +
 
 ### Scraping web data in table format: A more advanced example
 
-When there are multiple tables on the website, scraping them becomes a bit more complicated. Let's work through an exemplary scenario: Scraping a table from Wikipedia with a list of the most populated cities in the United States.
+When there are multiple tables on the website, scraping them beco mes a bit more complicated. Let's work through an exemplary scenario: Scraping a table from Wikipedia with a list of the most populated cities in the United States.
 
 ```{r}
 url <- "https://en.wikipedia.org/wiki/List_of_United_States_cities_by_population"
