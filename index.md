@@ -283,7 +283,7 @@ We will learn how to work with other data types, including audio, visual and spa
 
 #### Seminar
 
-- Code: [03-MPs.Rmd](week09/03-MPs.Rmd), [03-MPs-solution.Rmd](week09/03-MPs-solution.Rmd)
+- Code: [03-MPs.Rmd](week09/03-MPs.Rmd), [03-MPs-solution.Rmd](week09/03-MPs-solutions.Rmd)
 
 #### Reading
 * Araya-Salas, Marcelo. 2023. _Bioacoustic Analysis in R: Organization for Tropical Studies_. <https://marce10.github.io/OTS_BIR_2023/>, tutorials on [sound](https://marce10.github.io/OTS_BIR_2023/sound.html), [spectrograms](https://marce10.github.io/OTS_BIR_2023/spectrograms.html) and [`seewave`](https://marce10.github.io/OTS_BIR_2023/seewave.html).
@@ -305,8 +305,8 @@ This session will offer an introduction to relational databases: structure, logi
 
 #### Lecture
 
-- [Slides](x)
-- Code: [SQL introduction](x), [join and aggregation in SQL](x)
+- [Slides](week10/MY472-week10-sql.pdf)
+- Code: [SQL introduction](week10/01-sql-intro.Rmd), [join and aggregation in SQL](week10/02-sql-join-and-aggregation.Rmd)
 
 
 #### Seminar
